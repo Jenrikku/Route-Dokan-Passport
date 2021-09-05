@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>TestingDokan</RootNamespace>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dokan Groups\Dokan Groups.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BfresLibrary">
+      <HintPath>..\Libraries Dokan\BfresLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="SARCExt">
+      <HintPath>..\Libraries Dokan\SARCExt.dll</HintPath>
+    </Reference>
+    <Reference Include="Syroot.Maths">
+      <HintPath>G:\Libraries\Documents\GitHub\BfresPlatformConverter\BfresLibrary\Libraries\Standard\Syroot.Maths.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

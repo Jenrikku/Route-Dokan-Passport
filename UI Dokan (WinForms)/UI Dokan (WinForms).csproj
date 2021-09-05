@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>UIDokan</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>RouteDokanPassportUI</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="DokanMap.resx~RF7f68a3.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Console Dokan\Console Dokan.csproj" />
+    <ProjectReference Include="..\Dokan Groups\Dokan Groups.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="EditorCoreCommon">
+      <HintPath>..\Libraries Dokan\EditorCoreCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="SARCExt">
+      <HintPath>..\Libraries Dokan\SARCExt.dll</HintPath>
+    </Reference>
+    <Reference Include="Syroot.Maths">
+      <HintPath>..\Libraries Dokan\Syroot.Maths.dll</HintPath>
+    </Reference>
+    <Reference Include="Syroot.NintenTools.NSW.Bntx">
+      <HintPath>..\Libraries Dokan\Syroot.NintenTools.NSW.Bntx.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Syroot.IO.BinaryData" Version="2.0.2" />
+    <PackageReference Include="WindowsAPICodePack-Shell" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="AnimationData.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AnimationData.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="AnimationData.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AnimationData.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

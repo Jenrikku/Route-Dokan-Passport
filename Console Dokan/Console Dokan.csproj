@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>ConsoleDokan</RootNamespace>
+    <AssemblyName>RouteDokanPassport</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Syroot.IO.BinaryData" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dokan Groups\Dokan Groups.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SARCExt">
+      <HintPath>..\Libraries Dokan\SARCExt.dll</HintPath>
+    </Reference>
+    <Reference Include="Syroot.Maths">
+      <HintPath>..\Libraries Dokan\Syroot.Maths.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
