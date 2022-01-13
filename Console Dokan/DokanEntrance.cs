@@ -4,10 +4,15 @@ using Syroot.BinaryData;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 
 namespace ConsoleDokan {
     public class DokanEntrance {
         public static void Main(string[] args) {
+            // Enables Shift-JIS encoding
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            Encoding.GetEncoding("Shift-JIS");
+
             string directory;
             string output = string.Empty;
             bool isWiiU = false;
@@ -76,6 +81,9 @@ namespace ConsoleDokan {
 
                 List<string> names = new();
                 foreach(FileInfo file in new DirectoryInfo(Path.Join(directory, "StageData")).GetFiles()) {
+                    if(file.Extension != ".szs")
+                        continue;
+
                     string current = RemoveStringEnd(file.FullName);
                     if(!names.Contains(current)) names.Add(current);
                 }
