@@ -1,4 +1,5 @@
-# RouteDokanPassport
+This repository is deprecated, please refer to [RouteDokan.Passport](https://github.com/Jenrikku/RouteDokan.Passport)
+# Route-Dokan-Passport
 A WIP Super Mario 3D World mod porter that is capable of porting mods between version.
 ## Features
 It only supports porting from Wii U to Switch and only ObjectData and StageData. Other formats may be available in the future.
